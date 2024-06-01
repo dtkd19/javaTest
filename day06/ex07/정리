@@ -1,0 +1,63 @@
+package day06.ex07;
+
+public class Member {
+  // 1. 필드명
+ String name;
+  int age;
+  String tel;
+  //생성자 - 기본생성자 Member() - 인스턴스 객체 선언
+  // 가장먼저 실행되는 부분
+  // 2. 사용자 정의 생성자 - 클래스명과 동일
+  Member( String name, int age, String tel){
+    System.out.println("1. 생성자 호출 ");
+    this.name = name;
+    this.age = age;
+    this.tel = tel;
+  }
+ // 3. 메소드
+
+}
+
+
+
+
+
+
+
+
+public class MemberTest {
+  public static void main(String[] args) {
+    Member member1 = new Member(" 홍길동 ", 20 , " 010-0000-1111 "); // 객체생성 - 메모리할당 - 생성자 호출
+    Member member2 = new Member(" 이영한 ", 22 , " 010-0050-1111 "); // 객체생성 - 메모리할당 - 생성자 호출
+    Member member3 = new Member(" 임아니 ", 23 , " 010-0400-1111 "); // 객체생성 - 메모리할당 - 생성자 호출
+    Member[] members = new Member[]{member1,member2,member3};
+   /* for (int i = 0; i < members.length ; i++) {
+      System.out.println( members[i].name + members[i].age + members[i].tel);
+    } */
+    for ( Member m : members) {
+      System.out.println( "이름 : " + m.name + " 나이 : " +  m.age + " 번호 : " +  m.tel );
+    }
+    System.out.println( " ------------------- ");
+    System.out.println( " 인스턴스(객체) 실행 ");
+  }
+}
+
+
+
+public class MemberTest {
+  public static void main(String[] args) {
+    Member member1 = new Member(); // 객체생성 - 메모리할당 - 생성자 호출
+    Member member2 = new Member(" 홍길동 "); // 객체생성 - 메모리할당 - 생성자 호출
+    Member member3 = new Member(" 이영한 ", 22 ); // 객체생성 - 메모리할당 - 생성자 호출
+    Member member4 = new Member(" 임아니 ", 23 , " 010-0400-1111 "); // 객체생성 - 메모리할당 - 생성자 호출
+    Member[] members = new Member[]{member1,member2,member3,member4};
+   /* for (int i = 0; i < members.length ; i++) {
+      System.out.println( members[i].name + members[i].age + members[i].tel);
+    } */
+    for ( Member m : members) {
+      System.out.println( "이름 : " + m.name + " 나이 : " +  m.age + " 번호 : " +  m.tel );
+    }
+    System.out.println( " ------------------- ");
+    System.out.println( " 인스턴스(객체) 실행 ");
+  }
+}
